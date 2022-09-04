@@ -1,0 +1,79 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:import/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "airbnb-typescript/base",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": ["element", "attribute"],
+            "prefix": "app"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "no-console": [
+          "error",
+          {
+            "allow": ["warn", "error"]
+          }
+        ],
+        "prettier/prettier": [
+          "error",
+          {
+            "endOfLine": "auto"
+          }
+        ],
+        "import/prefer-default-export": "off",
+        "no-plusplus": "off",
+        "no-param-reassign": "off",
+        "class-methods-use-this": "off",
+        "@typescript-eslint/dot-notation": "off",
+        "one-var": "off",
+        "import/no-extraneous-dependencies": "off",
+        "max-classes-per-file": "off",
+        "@angular-eslint/no-host-metadata-property": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/no-loop-func": "off",
+        "prefer-destructuring": "off",
+        "no-case-declarations": "off",
+        "@typescript-eslint/no-implied-eval": "off",
+        "no-prototype-builtins": "off"
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}
